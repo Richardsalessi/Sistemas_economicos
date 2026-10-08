@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suecia: Economía Mixta - Exposición</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS para animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5 { font-family: 'Merriweather', serif; }
+        .bg-sweden-blue { background-color: #004B87; }
+        .text-sweden-blue { color: #004B87; }
+        .bg-sweden-yellow { background-color: #FFCD00; }
+        .text-sweden-yellow { color: #FFCD00; }
+        .gradient-overlay { background: linear-gradient(180deg, rgba(0,75,135,0.85) 0%, rgba(0,35,70,0.95) 100%); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Barra de progreso de Scroll -->
+    <div class="fixed top-0 left-0 w-full h-1.5 z-[60]">
+        <div id="progress-bar" class="h-full bg-sweden-yellow w-0 rounded-r-full shadow-md"></div>
+    </div>
+
+    <!-- Menú de Navegación Profesional -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-4">
+                    <img src="img/bandera-de-Suecia.jpg" alt="Bandera Suecia" class="h-8 w-auto shadow-sm rounded-sm">
+                    <div>
+                        <span class="block font-bold text-xl text-sweden-blue leading-tight">Suecia</span>
+                        <span class="block text-xs text-gray-500 font-semibold tracking-wider uppercase">Análisis Económico</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-1">
+                    <a href="#dario" class="text-gray-700 hover:text-sweden-blue hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-bold transition">1. Intro y Producción</a>
+                    <a href="#brayan" class="text-gray-700 hover:text-sweden-blue hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-bold transition">2. Recursos y Decisiones</a>
+                    <a href="#wilfer" class="text-gray-700 hover:text-sweden-blue hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-bold transition">3. Mercados y Estado</a>
+                    <a href="#richards" class="text-gray-700 hover:text-sweden-blue hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-bold transition">4. Distribución y Análisis</a>
+                    <a href="#juan" class="bg-sweden-blue text-white hover:bg-blue-800 px-4 py-2 rounded-md text-sm font-bold transition ml-2 shadow-md">Conclusión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PORTADA ACADÉMICA -->
+    <section id="inicio" class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1498622205843-3b0ac17be8aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 gradient-overlay z-0"></div>
+        
+        <div class="z-10 text-center px-6 max-w-5xl mt-20" data-aos="fade-up" data-aos-duration="1200">
+            <div class="flex justify-center mb-6">
+                <img src="img/escudo_suecia.jpg" alt="Escudo Suecia" class="h-32 drop-shadow-2xl opacity-90 object-contain rounded-xl">
+            </div>
+            <span class="inline-block py-1.5 px-4 rounded-full bg-sweden-yellow text-sweden-blue font-bold text-xs tracking-widest uppercase mb-6 shadow-lg">
+                Proyecto Académico - Principios de Economía FI303202
+            </span>
+            <!-- Min-height para evitar saltos visuales -->
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight text-white drop-shadow-lg min-h-[120px] md:min-h-[100px] flex items-center justify-center">
+                <span id="typed-title"></span>
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
+                El paradigma del <strong>Modelo Nórdico</strong>: Un análisis detallado de la coexistencia entre la alta competitividad del libre mercado y un profundo Estado de Bienestar.
+            </p>
+            
+            <!-- Tarjetas de datos rápidos -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-4 rounded-xl text-center">
+                    <p class="text-sweden-yellow text-xs font-bold uppercase mb-1">Tipo de Economía</p>
+                    <p class="text-white font-bold text-lg">Mixta</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-4 rounded-xl text-center">
+                    <p class="text-sweden-yellow text-xs font-bold uppercase mb-1">Moneda</p>
+                    <p class="text-white font-bold text-lg">Corona (SEK)</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-4 rounded-xl text-center">
+                    <p class="text-sweden-yellow text-xs font-bold uppercase mb-1">PIB per cápita</p>
+                    <p class="text-white font-bold text-lg">Alto</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-4 rounded-xl text-center">
+                    <p class="text-sweden-yellow text-xs font-bold uppercase mb-1">Índice Gini</p>
+                    <p class="text-white font-bold text-lg">Muy Bajo (Equitativo)</p>
+                </div>
+            </div>
+
+            <a href="#dario" class="animate-bounce inline-block p-4 bg-white text-sweden-blue rounded-full shadow-2xl hover:bg-sweden-yellow transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: DARÍO (Introducción y Producción) -->
+    <section id="dario" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-sweden-blue text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">D</div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Sección 1</p>
+                            <h3 class="text-lg font-bold text-sweden-blue">Expositor: Darío</h3>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">Introducción y Organización de la Producción</h2>
+                    <div class="w-24 h-1.5 bg-sweden-yellow mb-8"></div>
+                    
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="mb-4">
+                            <strong>Introducción:</strong> Suecia representa uno de los ejemplos más exitosos de una <strong>economía mixta</strong>. Este modelo, frecuentemente llamado <em>"Modelo Nórdico"</em>, refuta la idea de que se debe elegir exclusivamente entre capitalismo o socialismo. Combina el dinamismo y la eficiencia del libre mercado con objetivos sociales garantizados por el Estado.
+                        </p>
+                        <h4 class="text-xl font-bold text-gray-800 mt-6 mb-3">¿Cómo se organiza la producción?</h4>
+                        <p class="mb-4">
+                            La producción está altamente industrializada, orientada fuertemente hacia la exportación (tecnología, maquinaria, vehículos, productos farmacéuticos). La organización productiva se rige por lógicas capitalistas de <strong>eficiencia y rentabilidad privada</strong>.
+                        </p>
+                        <div class="bg-blue-50 border-l-4 border-sweden-blue p-5 rounded-r-lg mt-6 shadow-sm">
+                            <h5 class="font-bold text-sweden-blue mb-2">Particularidad del Modelo: El Acuerdo de Saltsjöbaden</h5>
+                            <p class="text-sm">
+                                A diferencia de otros países, el gobierno sueco rara vez interviene directamente en las fábricas o establece salarios mínimos por ley. La producción se organiza mediante un altísimo nivel de <strong>cooperación y negociación colectiva</strong> directa entre los poderosos sindicatos de trabajadores y las asociaciones de empleadores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 relative" data-aos="zoom-in">
+                    <!-- Decoración -->
+                    <div class="absolute -top-4 -right-4 w-full h-full border-4 border-sweden-yellow rounded-xl z-0"></div>
+                    <img src="img/industria.jpg" alt="Industria Suecia" class="relative z-10 rounded-xl shadow-2xl object-cover h-[500px] w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: BRAYAN (Recursos y Decisiones) -->
+    <section id="brayan" class="py-24 bg-gray-50 relative border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <!-- Lado Izquierdo: Grilla de marcas y recursos -->
+                <div class="w-full md:w-1/2 order-2 md:order-1" data-aos="fade-up">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center items-center h-40 border border-gray-100 hover:shadow-lg transition">
+                            <span class="text-4xl mb-2">🚗</span>
+                            <span class="font-black text-gray-800 tracking-wider">VOLVO</span>
+                            <span class="text-xs text-gray-500 mt-2">Empresa Privada</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center items-center h-40 border border-gray-100 hover:shadow-lg transition">
+                            <span class="text-4xl mb-2">🛋️</span>
+                            <span class="font-black text-blue-800 tracking-wider">IKEA</span>
+                            <span class="text-xs text-gray-500 mt-2">Empresa Privada</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center items-center h-40 border border-gray-100 hover:shadow-lg transition">
+                            <span class="text-4xl mb-2">🎵</span>
+                            <span class="font-black text-green-500 tracking-wider">Spotify</span>
+                            <span class="text-xs text-gray-500 mt-2">Empresa Privada</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center items-center h-40 border border-gray-100 hover:shadow-lg transition">
+                            <span class="text-4xl mb-2">📡</span>
+                            <span class="font-black text-gray-700 tracking-wider">ERICSSON</span>
+                            <span class="text-xs text-gray-500 mt-2">Empresa Privada</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-sweden-blue text-white p-6 rounded-xl shadow-lg flex items-center gap-4">
+                        <span class="text-3xl">⛏️</span>
+                        <div>
+                            <p class="font-bold">LKAB & Vattenfall</p>
+                            <p class="text-sm text-blue-200">Excepciones: Empresas de propiedad del Estado (Minería y Energía).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lado Derecho: Texto -->
+                <div class="w-full md:w-1/2 order-1 md:order-2" data-aos="fade-left">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-sweden-yellow text-sweden-blue rounded-full flex items-center justify-center font-bold text-xl shadow-lg">B</div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Sección 2</p>
+                            <h3 class="text-lg font-bold text-gray-900">Expositor: Brayan</h3>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">Propiedad de Recursos y Toma de Decisiones</h2>
+                    <div class="w-24 h-1.5 bg-sweden-blue mb-8"></div>
+                    
+                    <div class="prose prose-lg text-gray-600">
+                        <h4 class="text-xl font-bold text-gray-800 mb-3">¿Quién posee los recursos?</h4>
+                        <p class="mb-4">
+                            Existe un mito común de que Suecia, al tener fuertes políticas sociales, tiene los medios de producción estatizados. La realidad es opuesta: <strong>alrededor del 90% de las empresas y recursos productivos son de propiedad estrictamente privada</strong>. El tejido empresarial incluye desde grandes multinacionales hasta un ecosistema vibrante de startups. El Estado reserva su propiedad casi exclusivamente para monopolios naturales o recursos estratégicos (minería de hierro, partes de la red eléctrica y ferroviaria).
+                        </p>
+                        
+                        <h4 class="text-xl font-bold text-gray-800 mt-6 mb-3">¿Quién toma las decisiones?</h4>
+                        <p class="mb-4">
+                            Las decisiones económicas macro y micro están fragmentadas:
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2 marker:text-sweden-blue">
+                            <li><strong>Las empresas y consumidores:</strong> Toman las decisiones sobre <em>qué, cómo y cuánto producir</em> de manera descentralizada, guiados exclusivamente por las señales del mercado (oferta, demanda y rentabilidad).</li>
+                            <li><strong>El Estado:</strong> Toma las decisiones normativas. Impone estrictas regulaciones medioambientales, normas de calidad y recauda los impuestos necesarios para el bienestar social.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: WILFER (Mercados y Estado) -->
+    <section id="wilfer" class="py-24 bg-sweden-blue text-white relative border-t-8 border-sweden-yellow overflow-hidden">
+        <!-- Fondo geométrico -->
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Texto -->
+                <div class="w-full lg:w-1/2" data-aos="fade-up">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-white text-sweden-blue rounded-full flex items-center justify-center font-bold text-xl shadow-lg">W</div>
+                        <div>
+                            <p class="text-sm text-blue-200 font-bold uppercase tracking-wider">Sección 3</p>
+                            <h3 class="text-lg font-bold text-white">Expositor: Wilfer</h3>
+                        </div>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Funcionamiento del Mercado y Papel del Estado</h2>
+                    <div class="w-24 h-1.5 bg-sweden-yellow mb-8"></div>
+                    
+                    <div class="prose prose-lg text-blue-50">
+                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                            <svg class="w-6 h-6 text-sweden-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            ¿Cómo funcionan los mercados?
+                        </h4>
+                        <p class="mb-6">
+                            Los mercados en Suecia son <strong>altamente abiertos, desregulados en materia de comercio e integrados a la economía global</strong>. De hecho, en varios índices de libertad económica, Suecia puntúa más alto que muchas economías consideradas puramente capitalistas. No existen fijaciones artificiales de precios por parte del gobierno para los bienes comerciales, fomentando una competencia feroz basada en la innovación (I+D).
+                        </p>
+
+                        <h4 class="text-xl font-bold text-white mt-6 mb-3 flex items-center gap-2">
+                            <svg class="w-6 h-6 text-sweden-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                            ¿Qué papel tiene el Estado?
+                        </h4>
+                        <p>
+                            El papel del Estado es fundamental, pero no como productor, sino como <strong>recaudador y redistribuidor</strong>. A través de un sistema de impuestos altos y progresivos, el Estado financia una inmensa red de seguridad (seguro de desempleo, licencias de maternidad/paternidad generosas, pensiones). Además, el Estado es un gran empleador en el sector servicios, proporcionando médicos, enfermeros y profesores directamente a la población.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tarjetas de Visualización -->
+                <div class="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 items-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="bg-blue-800/80 backdrop-blur-md p-8 rounded-2xl border border-blue-600 shadow-2xl hover:scale-105 transition-transform">
+                        <div class="text-sweden-yellow text-5xl mb-4">📈</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Libertad Comercial</h3>
+                        <p class="text-blue-200">Facilidad extrema para crear empresas, defender derechos de propiedad y competir globalmente sin aranceles proteccionistas.</p>
+                    </div>
+                    <div class="bg-blue-800/80 backdrop-blur-md p-8 rounded-2xl border border-blue-600 shadow-2xl hover:scale-105 transition-transform md:translate-y-12">
+                        <div class="text-sweden-yellow text-5xl mb-4">🛡️</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Estado de Bienestar</h3>
+                        <p class="text-blue-200">Impuestos progresivos (hasta el 50%+ para rentas altas) aseguran que ninguna persona caiga en la pobreza extrema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: RICHARDS (Distribución, Ventajas y Dificultades) -->
+    <section id="richards" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-down">
+                <div class="inline-flex items-center gap-3 bg-gray-100 text-gray-800 px-6 py-2 rounded-full font-bold mb-6 mx-auto shadow-sm border border-gray-200">
+                    <div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">R</div>
+                    <span>Expositor: Richards</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">Distribución de Bienes, Ventajas y Dificultades</h2>
+                <div class="w-32 h-1.5 bg-green-500 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Columna 1: Distribución -->
+                <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:border-blue-300 transition-colors" data-aos="fade-up" data-aos-delay="0">
+                    <div class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center text-blue-600 mb-6 shadow-sm rotate-3">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black text-gray-900 mb-4">¿Cómo se distribuyen los bienes?</h3>
+                    <p class="text-gray-600 mb-4">Suecia opera bajo un <strong>sistema de distribución dual</strong>:</p>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex gap-3">
+                            <span class="text-blue-500 mt-1">🛒</span>
+                            <span><strong>Bienes de Consumo:</strong> Ropa, alimentos, tecnología, vehículos. Se distribuyen exclusivamente a través del <em>mercado</em> y el poder adquisitivo del individuo.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-blue-500 mt-1">🏥</span>
+                            <span><strong>Servicios Esenciales (Bienes Mérito):</strong> Educación (desde infantil hasta universitaria), atención médica, cuidado de ancianos. Se distribuyen a través del <em>Estado</em> de forma equitativa a todos los ciudadanos, financiados por impuestos colectivos, sin importar la riqueza personal.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 2: Ventajas -->
+                <div class="bg-green-50/50 rounded-2xl p-8 shadow-xl border border-green-200 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-green-200 rounded-full opacity-50 z-0"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-black text-green-800 mb-6 flex items-center gap-3">
+                            <span class="bg-green-600 text-white p-2 rounded-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span>
+                            Ventajas del Modelo
+                        </h3>
+                        <ul class="space-y-4 text-gray-700 font-medium">
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm">
+                                <span class="text-green-600 font-bold">1.</span> 
+                                <span><strong>Paz Social:</strong> Cohesión social excepcionalmente alta y bajos índices de criminalidad gracias a la falta de pobreza extrema.</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm">
+                                <span class="text-green-600 font-bold">2.</span> 
+                                <span><strong>Baja Desigualdad:</strong> Es uno de los países con menor desigualdad de ingresos en el mundo (Índice Gini muy bajo).</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm">
+                                <span class="text-green-600 font-bold">3.</span> 
+                                <span><strong>Innovación Segura:</strong> Al tener salud y educación garantizadas, los ciudadanos toman más riesgos empresariales (alta creación de startups tecnológicas).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Dificultades -->
+                <div class="bg-red-50/50 rounded-2xl p-8 shadow-xl border border-red-200 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-red-200 rounded-full opacity-50 z-0"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-black text-red-800 mb-6 flex items-center gap-3">
+                            <span class="bg-red-600 text-white p-2 rounded-lg"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg></span>
+                            Dificultades / Retos
+                        </h3>
+                        <ul class="space-y-4 text-gray-700 font-medium">
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm border-l-4 border-red-400">
+                                <span class="text-red-500 mt-0.5">⚠️</span> 
+                                <span><strong>Carga Fiscal:</strong> Implica altos impuestos tanto para las empresas como para el ingreso de los trabajadores (IVA del 25%).</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm border-l-4 border-red-400">
+                                <span class="text-red-500 mt-0.5">⚠️</span> 
+                                <span><strong>Rigidez Laboral:</strong> Los fuertes acuerdos sindicales pueden hacer costoso y difícil contratar o despedir personal rápidamente.</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm border-l-4 border-red-400">
+                                <span class="text-red-500 mt-0.5">⚠️</span> 
+                                <span><strong>Reto Demográfico:</strong> Mantener el generoso Estado de bienestar es financieramente complejo frente al envejecimiento de la población y los costos de integrar olas migratorias recientes.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: JUAN (Conclusión) -->
+    <section id="juan" class="min-h-screen flex items-center justify-center py-24 bg-gray-900 text-white relative text-center border-t-8 border-gray-700">
+        <!-- Fondo imagen oscura -->
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1513622470522-26c311a62968?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent z-0"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="inline-flex items-center gap-3 bg-gray-800 text-gray-200 border border-gray-600 px-6 py-2 rounded-full font-bold mb-10 shadow-lg">
+                <div class="w-8 h-8 bg-sweden-yellow text-sweden-blue rounded-full flex items-center justify-center font-bold">J</div>
+                <span class="tracking-widest uppercase text-sm">Conclusión Final • Juan</span>
+            </div>
+            
+            <h2 class="text-5xl md:text-6xl font-black mb-10 tracking-tight">El Balance Perfecto</h2>
+            
+            <div class="relative">
+                <span class="absolute top-0 left-0 text-7xl text-gray-700 opacity-50 -translate-x-8 -translate-y-6 font-serif">"</span>
+                <p class="text-2xl md:text-3xl text-gray-300 leading-relaxed font-light italic relative z-10">
+                    El caso de la economía mixta sueca demuestra empíricamente que la dicotomía entre eficiencia económica y equidad social es falsa. <br><br>
+                    Nos enseña que es posible utilizar el <strong>capitalismo como motor de producción</strong> e innovación, y aplicar <strong>políticas de bienestar social para la distribución</strong> de esa riqueza, garantizando prosperidad, libertad y dignidad para todos sus ciudadanos.
+                </p>
+                <span class="absolute bottom-0 right-0 text-7xl text-gray-700 opacity-50 translate-x-8 translate-y-12 font-serif">"</span>
+            </div>
+            
+            <div class="mt-20">
+                <div class="w-16 h-1 bg-sweden-yellow mx-auto mb-6 rounded"></div>
+                <p class="text-sweden-yellow font-bold tracking-widest uppercase text-lg">¡Muchas gracias por su atención!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer académico -->
+    <footer class="bg-black text-gray-500 py-6 text-center text-sm">
+        <p>Bibliografía base: Greenlaw, S. A., & Shapiro, D. (2017). Principles of Microeconomics 2e. OpenStax.</p>
+        <p class="mt-2">Proyecto de Principios de Economía FI303202 - Exposición Grupo: Suecia.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
